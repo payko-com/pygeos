@@ -84,7 +84,7 @@ def check_shapely_version():
             if os.path.exists(os.path.join(sys.prefix, "conda-meta")):
                 if geos_version_string.startswith(geos_capi_version_string):
                     # only if using conda and having the same GEOS version
-                    shapely_compatible = True
+                    shapely_compatible = False
             if not shapely_compatible:
                 warnings.warn(
                     "The shapely GEOS version ({}) is incompatible "
